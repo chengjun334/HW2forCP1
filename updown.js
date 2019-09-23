@@ -2,37 +2,37 @@ function setup() {
   createCanvas(400, 400);
 }
 
-var ballX = 30;
+var ballY = 30;
 var ballSpeed = 3;
 
-var ballX2 = 370;
+var ballY2 = 370;
 var ballSpeed2 = 5;
 
 function draw() {
   background(220);
 
   fill(255, 0, 0);
-  ellipse(150, ballX, 30);
+  ellipse(150, ballY, 30);
   
   fill(0, 0, 255);
-  ellipse(250, ballX2, 30);
+  ellipse(250, ballY2, 30);
 
-  ballX = ballX + ballSpeed;
-  ballX2 = ballX2 + ballSpeed2;
+  ballY = ballY + ballSpeed;
+  ballY2 = ballY2 + ballSpeed2;
 
-  if (ballX >= 400) {
+  if (ballY >= 400) {
     ballSpeed = -3;
   }
 
-  if (ballX2 >= 400) {
+  if (ballY2 >= 400) {
     ballSpeed2 = -5;
   }
 
-  if (ballX <= 0) {
+  if (ballY <= 0) {
     ballSpeed = 3;
   }
 
-  if (ballX2 <= 0) {
+  if (ballY2 <= 0) {
     ballSpeed2 = 5;
   }
 
